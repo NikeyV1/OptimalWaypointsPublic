@@ -1,0 +1,45 @@
+plugins {
+	id 'java'
+}
+
+version = rootProject.mod_version
+group = rootProject.maven_group
+
+base {
+	archivesName = "optimalwaypoints-paper"
+}
+
+repositories {
+	maven {
+		name = "PaperMC"
+		url = "https://repo.papermc.io/repository/maven-public/"
+	}
+	mavenCentral()
+}
+
+sourceSets {
+	main {
+		java.srcDir rootProject.file('protocol/src/main/java')
+	}
+}
+
+dependencies {
+	compileOnly "io.papermc.paper:paper-api:${rootProject.paper_api_version}"
+}
+
+java {
+	toolchain.languageVersion = JavaLanguageVersion.of(25)
+}
+
+tasks.withType(JavaCompile).configureEach {
+	options.encoding = "UTF-8"
+	options.release = 25
+}
+
+processResources {
+	def version = project.version
+	inputs.property "version", version
+	filesMatching("plugin.yml") {
+		expand "version": version
+	}
+}

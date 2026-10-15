@@ -1,0 +1,22 @@
+name: OptimalWaypoints
+version: '${version}'
+main: dev.nikey.optimalwaypoints.paper.OptimalWaypointsPlugin
+api-version: '26.3'
+description: Controls the Optimal Waypoints client mod and shows who uses it.
+author: Nikey
+commands:
+  optimalwaypoints:
+    description: Optimal Waypoints server control
+    usage: /optimalwaypoints <users|check|policy|maxdistance|message|reload>
+    aliases: [owpadmin]
+    permission: optimalwaypoints.admin
+permissions:
+  optimalwaypoints.admin:
+    description: Use /optimalwaypoints
+    default: op
+  optimalwaypoints.notify:
+    description: Get notified when a player joins with Optimal Waypoints
+    default: op
+  optimalwaypoints.bypass:
+    description: Ignore all Optimal Waypoints restrictions
+    default: false

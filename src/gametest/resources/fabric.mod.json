@@ -1,0 +1,15 @@
+{
+	"schemaVersion": 1,
+	"id": "optimalwaypoints-gametest",
+	"version": "1.0.0",
+	"name": "Optimal Waypoints Gametest",
+	"environment": "client",
+	"entrypoints": {
+		"fabric-client-gametest": [
+			"dev.nikey.optimalwaypoints.gametest.OwpClientGameTest"
+		]
+	},
+	"depends": {
+		"optimalwaypoints": "*"
+	}
+}

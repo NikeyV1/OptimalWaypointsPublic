@@ -1,0 +1,33 @@
+{
+	"schemaVersion": 1,
+	"id": "optimalwaypoints",
+	"version": "${version}",
+	"name": "Optimal Waypoints",
+	"description": "Waypoints and block markers. Servers can restrict features with the Optimal Waypoints plugin.",
+	"authors": [
+		"Nikey"
+	],
+	"license": "All-Rights-Reserved",
+	"icon": "assets/optimalwaypoints/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"dev.nikey.optimalwaypoints.OptimalWaypoints"
+		],
+		"modmenu": [
+			"dev.nikey.optimalwaypoints.compat.ModMenuIntegration"
+		]
+	},
+	"mixins": [
+		"optimalwaypoints.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"modmenu": "*"
+	}
+}

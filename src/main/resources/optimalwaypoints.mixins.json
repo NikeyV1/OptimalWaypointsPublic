@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "dev.nikey.optimalwaypoints.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"client": [
+		"RenderTypeInvoker"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

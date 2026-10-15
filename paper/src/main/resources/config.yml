@@ -1,0 +1,28 @@
+# Set a feature to false to disable it for players using Optimal Waypoints.
+features:
+  mod: true
+  in_world_waypoints: true
+  block_highlights: true
+  through_walls: true
+  deathpoints: true
+  sharing: true
+  chat_coordinates: true
+  distance_display: true
+  cross_dimension: true
+
+# Waypoint render distance limit in blocks, 0 = unlimited.
+max-distance: 0
+
+# Shown to players together with the restrictions.
+message: ""
+
+# Per-world overrides. Only the listed values replace the global ones.
+# Example:
+#   world_pvp:
+#     features:
+#       through_walls: false
+#     max-distance: 300
+worlds: {}
+
+notify-staff: true
+log-users: true
